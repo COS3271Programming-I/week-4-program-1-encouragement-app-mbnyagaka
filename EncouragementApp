@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class EncouragementApp {
+    public static void main(String[] args) {
+        Scanner userinput = new Scanner(System.in);
+
+        System.out.print("How old are you? ");
+        int age = userinput.nextInt();
+        userinput.nextLine(); 
+
+        System.out.print("How are you doing today? (great / good / okay / bad / terrible): ");
+        String mood = userinput.nextLine().trim().toLowerCase();
+
+        System.out.println(); 
+
+        if (mood.equals("great")) {
+            System.out.println("Love that energy! Keep going—you’re doing amazing.");
+        } else if (mood.equals("good")) {
+            System.out.println("Glad to hear you’re doing good. Keep building on that!");
+        } else if (mood.equals("okay")) {
+            System.out.println("Okay days are normal. Small wins still count.");
+        } else if (mood.equals("bad")) {
+            System.out.println("Sorry you’re having a rough day. Take it one step at a time.");
+        } else if (mood.equals("terrible")) {
+            System.out.println("That sounds really hard. Be kind to yourself today—you’ll get through it.");
+        } else {
+            System.out.println("Thanks for sharing. Whatever today looks like, you’ve got this.");
+        }
+
+        if (age < 13) {
+            System.out.println("Also—keep learning and having fun. You’re just getting started!");
+        } else if (age <= 19) {
+            System.out.println("Being a teen can be a lot. Stay focused—you’re growing every day.");
+        } else if (age <= 64) {
+            System.out.println("Keep pushing forward. Progress is progress, even if it’s small.");
+        } else {
+            System.out.println("Respect. Your experience matters—keep taking care of yourself.");
+        }
+
+        userinput.close();
+    }
+}
